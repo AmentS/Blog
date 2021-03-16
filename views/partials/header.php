@@ -1,3 +1,10 @@
+<?php
+
+include '../../public/db_conn.php'
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +13,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../public/css/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../../public/js/app.js"></script>
     <title>Pocetna | Blogerino</title>
 </head>
 <body>
@@ -24,10 +31,7 @@
             <label for="btn-1" class="show">Features +</label>
             <a href="#">Kategorije</a>
             <input type="checkbox" id="btn-1">
-            <ul>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Elements</a></li>
-                <li><a href="#">Icons</a></li>
+            <ul id="show_cat">
             </ul>
         </li>
         <li><a href="#">O meni</a></li>
