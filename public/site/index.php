@@ -7,8 +7,8 @@
 <div class="container-2">
     <div class="wrap">
         <div class="container-2">
-            <div class="container-1">
-                <div class="container-2-box">
+            <div class="container-1" style="justify-content: flex-end">
+                <div class="container-2-box jc-end">
                     <select name="" id="" class="sort-blog">
                         <option value="">Sortiraj po:</option>
                         <option value="">Najnoviji</option>

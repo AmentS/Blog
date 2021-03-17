@@ -827,6 +827,7 @@ html h3 {
   color: #5b5b5b;
   font-size: 1.7rem;
   cursor: pointer;
+  outline: none;
 }
 
 /*HEADER ABD BURGER MENU*/
