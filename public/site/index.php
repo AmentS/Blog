@@ -29,7 +29,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -45,7 +45,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -61,7 +61,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -77,7 +77,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -93,7 +93,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -109,7 +109,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -125,7 +125,7 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
             <div class="art-container margin-b-3">
@@ -141,41 +141,10 @@
                         eget
                         risus nec, dapibus efficitur odio.
                     </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>
-            <div class="art-container margin-b-3">
-                <div class="art-container-box-l" style="background-image: url('../img/whatisblog.png')"></div>
-                <div class="art-container-box-r">
-                    <p class="color-gray font-1 margin-t-1">Datum: 21.12.2020</p>
-                    <h3 class="heading-3 color-org margin-t-1">Prvi blog</h3>
-                    <p class="color-gray heading-1 margin-t-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                        consectetur
-                        tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                        ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                        eget
-                        risus nec, dapibus efficitur odio.
-                    </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
-                </div>
-            </div>
-            <div class="art-container margin-b-3">
-                <div class="art-container-box-l" style="background-image: url('../img/whatisblog.png')"></div>
-                <div class="art-container-box-r">
-                    <p class="color-gray font-1 margin-t-1">Datum: 21.12.2020</p>
-                    <h3 class="heading-3 color-org margin-t-1">Prvi blog</h3>
-                    <p class="color-gray heading-1 margin-t-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                        consectetur
-                        tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                        ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                        eget
-                        risus nec, dapibus efficitur odio.
-                    </p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="" class="procitaj">Procitaj vise...</a></p>
-                </div>
-            </div>
+
 
         </div>
     </div>

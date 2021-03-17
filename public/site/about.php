@@ -1,7 +1,9 @@
 
 <?php include_once '../../views/partials/header.php' ?>
+<div class="container-2">
+    <div class="wrap border-b"></div>
 
-<div class="heading-2">test about</div>
+</div>
 
 
 
