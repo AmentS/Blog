@@ -19,3 +19,22 @@ function loadCategorys() {
     xhr.send();
 
 }
+
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 250) {
+            $('.scroll-arrow').fadeIn();
+        } else {
+            $('.scroll-arrow').fadeOut();
+        }
+    });
+
+    // scroll body to 0px on click
+    $('.scroll-arrow').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 10);
+        return false;
+    });
+});
+
