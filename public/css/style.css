@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*pocetna*/
+/*INDEX*/
 .art-container {
   display: flex;
   position: relative;
@@ -42,6 +42,7 @@
   color: #ffa117;
 }
 
+/*ABOUT*/
 .color-b {
   color: black;
 }
@@ -844,11 +845,21 @@ nav:after {
 
 nav .logo {
   float: left;
-  color: #ffa117;
   font-size: 27px;
   font-weight: 600;
   line-height: 70px;
   padding-left: 60px;
+}
+nav .logo a {
+  color: #ffa117;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+nav .logo a:hover {
+  font-size: 28px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav ul {
@@ -929,6 +940,48 @@ nav ul ul ul li {
 .fa-plus {
   font-size: 15px;
   margin-left: 40px;
+}
+
+/*FOOTER*/
+.footer {
+  width: 100%;
+  height: max-content;
+  background-color: white;
+  padding: 3rem;
+}
+
+.footer-div {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.svg-fb {
+  width: 3rem;
+  height: 3rem;
+  fill: #ffa117;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.svg-fb:hover {
+  fill: #4267B2;
+}
+
+.svg-gh {
+  width: 3rem;
+  height: 3rem;
+  fill: #ffa117;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.svg-gh:hover {
+  fill: #28a745;
 }
 
 *,

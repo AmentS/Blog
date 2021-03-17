@@ -4,77 +4,103 @@
 @import "utilities";
 @import "inputs&buttons";
 /*HEADER ABD BURGER MENU*/
-*{
+* {
   margin: 0;
   padding: 0;
   user-select: none;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
   background: #f2f2f2;
 }
-nav{
+
+nav {
   background: white;
   border-bottom: 1px solid rgba(91, 91, 91, 0.2);
 }
-nav:after{
+
+nav:after {
   content: '';
   clear: both;
   display: table;
 }
-nav .logo{
+
+nav .logo {
   float: left;
-  color: #ffa117;
   font-size: 27px;
   font-weight: 600;
   line-height: 70px;
   padding-left: 60px;
+
+  a {
+    color: #ffa117;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      font-size: 28px;
+      background: -webkit-linear-gradient(#eee, #333);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+    }
+  }
 }
-nav ul{
+
+nav ul {
   float: right;
   margin-right: 40px;
   list-style: none;
   position: relative;
 }
-nav ul li{
+
+nav ul li {
   float: left;
   display: inline-block;
   background: white;
   margin: 0 5px;
 }
-nav ul li a{
+
+nav ul li a {
   color: #ffa117;
   line-height: 70px;
   text-decoration: none;
   font-size: 18px;
   padding: 8px 15px;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
   transition: .3s ease-in-out;
   color: rgb(91, 91, 91);
   border-radius: 5px;
 
 }
-nav ul ul li a:hover{
+
+nav ul ul li a:hover {
   box-shadow: none;
 }
-nav ul ul{
+
+nav ul ul {
   position: absolute;
   top: 90px;
   opacity: 0;
   visibility: hidden;
   transition: top .3s;
 }
-nav ul ul ul{
+
+nav ul ul ul {
   border-top: none;
 }
-nav ul li:hover > ul{
+
+nav ul li:hover > ul {
   top: 70px;
   opacity: 1;
   visibility: visible;
 }
-nav ul ul li{
+
+nav ul ul li {
   position: relative;
   margin: 0px;
   width: 150px;
@@ -83,21 +109,72 @@ nav ul ul li{
   border-bottom: 1px solid rgba(91, 91, 91, 0.2);
   z-index: 3;
 }
-nav ul ul li a{
+
+nav ul ul li a {
   line-height: 50px;
   cursor: pointer;
 }
-nav ul ul ul li{
+
+nav ul ul ul li {
   position: relative;
   top: -60px;
   left: 150px;
 }
-.show,.icon,input{
+
+.show, .icon, input {
   display: none;
 }
-.fa-plus{
+
+.fa-plus {
   font-size: 15px;
   margin-left: 40px;
+}
+
+
+/*FOOTER*/
+
+.footer {
+  width: 100%;
+  height: max-content;
+  background-color: white;
+  padding: 3rem;
+}
+
+.footer-div {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.svg-fb {
+  width: 3rem;
+  height: 3rem;
+  fill: #ffa117;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    fill: #4267B2;
+  }
+}
+
+.svg-gh {
+  width: 3rem;
+  height: 3rem;
+  fill: #ffa117;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    fill: #28a745;
+  }
+
 }
 
 @import "mobile";

@@ -19,14 +19,14 @@ include '../../public/db_conn.php'
 <body>
 <nav>
     <div class="logo">
-        Blogerino
+        <a href=".">Blogerino</a>
     </div>
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>
     <input type="checkbox" id="btn">
     <ul>
-        <li><a href="#">Pocetna</a></li>
+        <li><a href=".">Pocetna</a></li>
         <li>
             <label for="btn-1" class="show">Features +</label>
             <a href="#">Kategorije</a>
@@ -34,7 +34,7 @@ include '../../public/db_conn.php'
             <ul id="show_cat">
             </ul>
         </li>
-        <li><a href="#">O meni</a></li>
-        <li><a href="#">Kontakt</a></li>
+        <li><a href="../../public/site/about.php">O meni</a></li>
+        <li><a href="../../public/site/contact.php">Kontakt</a></li>
     </ul>
 </nav>
