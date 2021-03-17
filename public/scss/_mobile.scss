@@ -34,6 +34,13 @@
 
 /*/ lg /*/
 @media only screen and (max-width: 991px) {
+
+  .wrap{
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  /*burger meni*/
   html {
     font-size: 42.5%;
   }

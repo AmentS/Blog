@@ -1,4 +1,47 @@
 @charset "UTF-8";
+/*pocetna*/
+.art-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.art-container:hover {
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.art-container-box-l {
+  flex-basis: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.art-container-box-r {
+  flex-basis: 72%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-right: 3rem;
+}
+
+.procitaj {
+  color: #5b5b5b;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.procitaj:hover {
+  color: #ffa117;
+}
+
 .color-b {
   color: black;
 }
@@ -12,11 +55,15 @@
 }
 
 .color-gray {
-  color: #707070;
+  color: #5b5b5b;
 }
 
 .color-blu {
   color: #2780e6;
+}
+
+.color-org {
+  color: #ffa117;
 }
 
 .f-w-b {
@@ -763,6 +810,14 @@ html h3 {
   position: relative;
 }
 
+.sort-blog {
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  width: 15rem;
+  height: 4rem;
+  color: #5b5b5b;
+  font-size: 1.7rem;
+}
+
 /*HEADER ABD BURGER MENU*/
 * {
   margin: 0;
@@ -906,6 +961,12 @@ nav ul ul ul li {
 }
 /*/ lg /*/
 @media only screen and (max-width: 991px) {
+  .wrap {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  /*burger meni*/
   html {
     font-size: 42.5%;
   }

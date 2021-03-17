@@ -1,0 +1,42 @@
+/*pocetna*/
+.art-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  &:hover{
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.art-container-box-l {
+  flex-basis: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.art-container-box-r {
+  flex-basis: 72%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-right: 3rem;
+}
+
+.procitaj {
+  color: rgb(91, 91, 91);
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  &:hover{
+    color: #ffa117;
+  }
+}
