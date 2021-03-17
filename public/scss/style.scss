@@ -81,6 +81,7 @@ nav ul ul li{
   float: none;
   display: list-item;
   border-bottom: 1px solid rgba(91, 91, 91, 0.2);
+  z-index: 3;
 }
 nav ul ul li a{
   line-height: 50px;
