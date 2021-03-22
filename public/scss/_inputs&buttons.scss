@@ -7,3 +7,30 @@
   cursor: pointer;
   outline: none;
 }
+
+.textarea-comment{
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  width: 100%;
+  height: 15rem;
+  outline: none;
+  padding: 3rem;
+  font-size: 1.7rem;
+  color: black;
+  resize: none;
+}
+
+.comment-post-btn{
+  width: 15rem;
+  height: 5rem;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  background-color: white;
+  color: rgba(91, 91, 91);
+  font-size: 1.7rem;
+  transition: .3s ease-in-out;
+  &:hover{
+    color: #ffa117;
+    border: 1px solid #ffa117;
+  }
+}
