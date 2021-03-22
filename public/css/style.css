@@ -64,6 +64,15 @@
 }
 
 /*ABOUT*/
+.about-pic {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .color-b {
   color: black;
 }
@@ -705,9 +714,9 @@ html h3 {
 /*justify*/
 .jc-center {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
+  align-items: center !important;
+  justify-content: center !important;
+  justify-items: center !important;
 }
 
 .jc-end {
@@ -827,7 +836,7 @@ html h3 {
 }
 
 .container-2-box {
-  flex-basis: 50%;
+  flex-basis: 48%;
   text-align: left;
   position: relative;
 }
