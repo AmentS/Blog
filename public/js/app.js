@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', loadCategorys(), loadReasons());
 
 //categories show frontend
@@ -21,6 +20,7 @@ function loadCategorys() {
     xhr.send();
 
 }
+
 //reasons show frontend
 function loadReasons() {
     var xhr = new XMLHttpRequest();
@@ -51,10 +51,16 @@ document.getElementById('send').addEventListener('click', () => {
     var email = document.getElementById('email').value;
     var text = document.getElementById('text').value;
     var select = document.getElementById('reasons_select').value;
-   /* if (name === '' || email === '' || text === '') {
-        error('error');
+    if (name === '') {
+       document.getElementById('name').classList.add('error-border');
+       return;
+    } else if (email === '') {
+        document.getElementById('email').classList.add('error-border');
         return;
-    }*/
+    } else if (text === '') {
+        document.getElementById('text').classList.add('error-border');
+        return;
+    }
 
     var pram = `name=${name}&email=${email}&text=${text}&select=${select}`;
     var xhr = new XMLHttpRequest();
@@ -64,9 +70,9 @@ document.getElementById('send').addEventListener('click', () => {
 
         if (this.responseText === 'saved') {
             swal("Uspjeh!", "Poruka uspješno poslata!", "success");
-           document.getElementById('name').value = '';
-           document.getElementById('email').value = '';
-           document.getElementById('text').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('text').value = '';
         } else if (this.responseText === 'not_saved') {
             swal("Greska", "Poruka je neuspješno poslata!", "error");
         }
@@ -77,23 +83,19 @@ document.getElementById('send').addEventListener('click', () => {
 
 })
 
-/*function error(msg) {
+function error(msg) {
     const p = document.createElement('p');
-    if (msg === 'webName') {
-        p.appendChild(document.createTextNode('Please enter website name'));
-    } else if (msg === 'pass') {
-        p.appendChild(document.createTextNode('Please generate password'));
-    } else {
-        p.appendChild(document.createTextNode('Please enter website name and generate password'));
+    if (msg === 'error') {
+        p.appendChild(document.createTextNode('Molimo popunite sva polja!'));
     }
 
     const div = document.getElementById('error-div');
     div.appendChild(p);
-/!*    const container = document.querySelector('.container-2-box');
-    const label = document.querySelector('#label');
-    container.insertBefore(div, label);//da ubacimo div prije lable-a*!/
+    /*    const container = document.querySelector('.container-2-box');
+        const label = document.querySelector('#label');
+        container.insertBefore(div, label);//da ubacimo div prije lable-a*/
     setTimeout(() => document.querySelector('.container-error').remove(), 2000)
-}*/
+}
 
 
 
