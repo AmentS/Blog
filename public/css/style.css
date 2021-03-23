@@ -74,6 +74,21 @@
 }
 
 /*CONTACT*/
+.container-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  width: 35rem;
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-error p {
+  color: red;
+}
+
 .color-b {
   color: black;
 }
@@ -96,6 +111,10 @@
 
 .color-org {
   color: #ffa117;
+}
+
+.color-r {
+  color: red;
 }
 
 .f-w-b {
