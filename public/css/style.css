@@ -914,6 +914,16 @@ html h3 {
   border: 1px solid #ffa117;
 }
 
+.select-reasons-contact {
+  display: block;
+  width: 35rem;
+  height: 5rem;
+  padding-left: 1rem;
+  color: black;
+  outline: none;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+}
+
 /*HEADER ABD BURGER MENU*/
 * {
   margin: 0;
