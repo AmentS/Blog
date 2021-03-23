@@ -1,6 +1,8 @@
 <?php include_once '../../views/partials/header.php' ?>
 
-<div class="heading-2">test kontakt</div>
+<div class="heading-2">
+    <div class="wrap"></div>
+</div>
 
 
 
