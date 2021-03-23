@@ -21,7 +21,7 @@ if (isset($_POST)) {
         exit('saved');
     }
     catch (PDOException $e){
-        exit($e);
+        exit('not_saved');
     }
 
 }

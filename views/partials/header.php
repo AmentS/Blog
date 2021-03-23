@@ -15,6 +15,8 @@ include '../../public/db_conn.php'
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="shortcut icon" href="#">
     <script src="../../public/js/app.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>Pocetna | Blogerino</title>
 </head>
 <body>

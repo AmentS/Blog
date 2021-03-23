@@ -51,14 +51,8 @@ document.getElementById('send').addEventListener('click', () => {
     var email = document.getElementById('email').value;
     var text = document.getElementById('text').value;
     var select = document.getElementById('reasons_select').value;
-/*    if (name === '' && pass !== '') {
-        error('webName');
-        return;
-    } else if (pass === '' && webName !== '') {
-        error('pass');
-        return;
-    } else if (webName === '' && pass === '') {
-        error();
+   /* if (name === '' || email === '' || text === '') {
+        error('error');
         return;
     }*/
 
@@ -69,14 +63,12 @@ document.getElementById('send').addEventListener('click', () => {
     xhr.onload = function () {
 
         if (this.responseText === 'saved') {
-            //swal("Successs", "Password successfully added!", "success");
-            alert('Msg sent');
+            swal("Uspjeh!", "Poruka uspješno poslata!", "success");
            document.getElementById('name').value = '';
            document.getElementById('email').value = '';
            document.getElementById('text').value = '';
-        } else if (this.responseText === 'not_ok') {
-            //swal("Error", "Website is already saved", "error");
-            alert('error')
+        } else if (this.responseText === 'not_saved') {
+            swal("Greska", "Poruka je neuspješno poslata!", "error");
         }
 
     }
