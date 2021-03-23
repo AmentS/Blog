@@ -887,6 +887,33 @@ html h3 {
   border: 1px solid #ffa117;
 }
 
+.input-text {
+  display: block;
+  width: 35rem;
+  height: 5rem;
+  padding-left: 1rem;
+  color: black;
+  outline: none;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+}
+.input-text:focus {
+  border: 1px solid #ffa117;
+}
+
+.textarea-contact {
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  width: 35rem;
+  height: 15rem;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: black;
+  resize: none;
+}
+.textarea-contact:focus {
+  border: 1px solid #ffa117;
+}
+
 /*HEADER ABD BURGER MENU*/
 * {
   margin: 0;
@@ -1130,6 +1157,7 @@ nav ul ul ul li {
   .wrap {
     padding-right: 4rem;
     padding-left: 4rem;
+    width: 100%;
   }
 
   /*burger meni*/
