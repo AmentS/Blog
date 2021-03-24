@@ -51,51 +51,57 @@ document.getElementById('send').addEventListener('click', () => {
     var email = document.getElementById('email').value;
     var text = document.getElementById('text').value;
     var select = document.getElementById('reasons_select').value;
+    var connditionMet = false;
+
     if (name === '') {
-       document.getElementById('name').classList.add('error-border');
-       return;
-    } else if (email === '') {
+        document.getElementById('name').classList.add('error-border');
+
+        connditionMet = false;
+    } else {
+        document.getElementById('name').classList.remove('error-border');
+        connditionMet = true;
+    }
+
+    if (email === '') {
         document.getElementById('email').classList.add('error-border');
-        return;
-    } else if (text === '') {
+        connditionMet = false;
+    } else {
+        document.getElementById('email').classList.remove('error-border');
+        connditionMet = true;
+    }
+
+
+    if (text === '') {
         document.getElementById('text').classList.add('error-border');
-        return;
+        connditionMet = false;
+    } else {
+        document.getElementById('text').classList.remove('error-border');
+        connditionMet = true;
     }
 
-    var pram = `name=${name}&email=${email}&text=${text}&select=${select}`;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '../save_contact_msg.php', true);
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
 
-        if (this.responseText === 'saved') {
-            swal("Uspjeh!", "Poruka uspješno poslata!", "success");
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('text').value = '';
-        } else if (this.responseText === 'not_saved') {
-            swal("Greska", "Poruka je neuspješno poslata!", "error");
+    if (connditionMet) {
+        var pram = `name=${name}&email=${email}&text=${text}&select=${select}`;
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '../save_contact_msg.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+
+            if (this.responseText === 'saved') {
+                swal("Uspjeh!", "Poruka uspješno poslata!", "success");
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('text').value = '';
+            } else if (this.responseText === 'not_saved') {
+                swal("Greska", "Poruka je neuspješno poslata!", "error");
+            }
+
         }
+        xhr.send(pram);
 
     }
-    xhr.send(pram);
 
 
 })
-
-function error(msg) {
-    const p = document.createElement('p');
-    if (msg === 'error') {
-        p.appendChild(document.createTextNode('Molimo popunite sva polja!'));
-    }
-
-    const div = document.getElementById('error-div');
-    div.appendChild(p);
-    /*    const container = document.querySelector('.container-2-box');
-        const label = document.querySelector('#label');
-        container.insertBefore(div, label);//da ubacimo div prije lable-a*/
-    setTimeout(() => document.querySelector('.container-error').remove(), 2000)
-}
-
 
 
