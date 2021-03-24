@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', loadCategorys(), loadReasons());
+document.addEventListener('DOMContentLoaded', loadCategorys(), loadReasons(), loadCategoryBlogCorner());
 
 //categories show frontend
 function loadCategorys() {
@@ -25,7 +25,6 @@ function loadCategorys() {
 function loadReasons() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '../reason_extract.php', true);
-    var select = document.getElementById('reasons_select');
     xhr.onload = function () {
         if (this.status === 200) {
             var rea = JSON.parse(this.responseText);
@@ -103,5 +102,28 @@ document.getElementById('send').addEventListener('click', () => {
 
 
 })
+
+//load categorys Blog corner
+function loadCategoryBlogCorner() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../category_extract.php', true);
+    xhr.onload = function () {
+        if (this.status === 200) {
+            var cat = JSON.parse(this.responseText);
+
+
+            for (var i in cat) {
+                var option = document.createElement("option");
+                option.text = cat[i].cat;
+                option.value = cat[i].id;
+                var select = document.getElementById("blog_category");
+                select.appendChild(option);
+            }
+        }
+    }
+
+    xhr.send();
+
+}
 
 

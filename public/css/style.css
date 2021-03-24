@@ -93,6 +93,56 @@
   border: 1px solid red !important;
 }
 
+/*BLOG CORNER*/
+.blog-corner-l {
+  width: 100%;
+  flex-basis: 65%;
+  height: max-content;
+  padding: 2rem;
+}
+
+.blog-title {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+.blog-img {
+  width: 100%;
+  height: 40rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-category {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+.blog-text {
+  width: 100%;
+  height: max-content;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-corner-r {
+  width: 100%;
+  flex-basis: 33%;
+  height: max-content;
+  padding: 2rem;
+}
+
 .color-b {
   color: black;
 }
@@ -945,6 +995,63 @@ html h3 {
   color: black;
   outline: none;
   border: 1px solid rgba(91, 91, 91, 0.2);
+}
+
+.blog-title-input {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  padding-left: 1rem;
+  color: black;
+  outline: none;
+  font-size: 3rem;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+}
+.blog-title-input:focus {
+  border: 1px solid #ffa117;
+}
+
+.blog-category-select {
+  display: block;
+  width: 35rem;
+  height: 5rem;
+  padding-left: 1rem;
+  color: black;
+  outline: none;
+  font-size: 3rem;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  cursor: pointer;
+}
+
+.textarea-blog-text {
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  width: 100%;
+  height: 25rem;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: black;
+  resize: none;
+}
+.textarea-blog-text:focus {
+  border: 1px solid #ffa117;
+}
+
+.post-blog-btn {
+  margin-top: 1.5rem;
+  width: 15rem;
+  height: 5rem;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  background-color: white;
+  color: #5b5b5b;
+  font-size: 1.7rem;
+  transition: 0.3s ease-in-out;
+}
+.post-blog-btn:hover {
+  color: #ffa117;
+  border: 1px solid #ffa117;
 }
 
 /*HEADER ABD BURGER MENU*/
