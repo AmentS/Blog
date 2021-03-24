@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', loadCategorys(), loadReasons(), loadCategoryBlogCorner());
+document.addEventListener('DOMContentLoaded',loadPosts(), loadCategorys(), loadReasons(), loadCategoryBlogCorner());
 
-//categories show frontend
+//categories show index
 function loadCategorys() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '../category_extract.php', true);
@@ -21,7 +21,32 @@ function loadCategorys() {
 
 }
 
-//reasons show frontend
+//load blog posts INDEX
+function loadPosts() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../post_extract.php');
+    xhr.onload = function () {
+        if (this.status === 200) {
+            var post = JSON.parse(this.responseText);
+            var output = '';
+            for (var i in post) {
+                output += `<div class="art-container margin-b-3">
+                <div class="art-container-box-l" style="background-image: url('../img/whatisblog.png')"></div>
+                <div class="art-container-box-r">
+                    <p class="color-gray font-1 margin-t-1">Datum: ${post[i].post_date}</p>
+                    <h3 class="heading-3 color-org margin-t-1">${post[i].title}</h3>
+                    <p class="color-gray heading-1 margin-t-2">${post[i].content}</p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
+                </div>
+            </div>`;
+            }
+            document.getElementById('list-post').innerHTML = output;
+        }
+    }
+    xhr.send();
+}
+
+//reasons show CONTACT
 function loadReasons() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '../reason_extract.php', true);
@@ -103,7 +128,7 @@ document.getElementById('send').addEventListener('click', () => {
 
 })
 
-//load categorys Blog corner
+//load categorys BLOG CORNER
 function loadCategoryBlogCorner() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '../category_extract.php', true);
@@ -125,5 +150,6 @@ function loadCategoryBlogCorner() {
     xhr.send();
 
 }
+
 
 

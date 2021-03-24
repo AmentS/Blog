@@ -42,6 +42,19 @@
   color: #ffa117;
 }
 
+.list-post {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  justify-content: space-between;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+
 /*BLOG PAGE*/
 .blog-page-img {
   width: 100%;
