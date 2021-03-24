@@ -57,6 +57,7 @@ document.getElementById('send').addEventListener('click', () => {
         document.getElementById('name').classList.add('error-border');
 
         connditionMet = false;
+        return connditionMet;
     } else {
         document.getElementById('name').classList.remove('error-border');
         connditionMet = true;
@@ -64,16 +65,15 @@ document.getElementById('send').addEventListener('click', () => {
 
     if (email === '') {
         document.getElementById('email').classList.add('error-border');
-        connditionMet = false;
+        return connditionMet;
     } else {
         document.getElementById('email').classList.remove('error-border');
         connditionMet = true;
     }
 
-
     if (text === '') {
         document.getElementById('text').classList.add('error-border');
-        connditionMet = false;
+        return connditionMet;
     } else {
         document.getElementById('text').classList.remove('error-border');
         connditionMet = true;
