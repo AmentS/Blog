@@ -25,7 +25,6 @@ function loadPosts() {
 }
 
 //sort posts index
-
 document.getElementById('select-sort').addEventListener('change', () => {
     var name = document.getElementById('select-sort').value;
     var pram = `sort=${name}`

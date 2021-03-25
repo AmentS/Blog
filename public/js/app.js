@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', loadCategorys(), loadReasons(), lo
 
                 var output = '';
                 for (var i in cat) {
-                    output += `<li><a href="../site/chategory.php?id=${cat[i].id}">${cat[i].cat}</a></li>`;
+                    output += `<li><a href="../site/category.php?id=${cat[i].id}">${cat[i].cat}</a></li>`;
                 }
 
                 document.getElementById('show_cat').innerHTML = output;

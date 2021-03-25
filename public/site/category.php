@@ -1,12 +1,20 @@
 <?php
 
+require_once '../db_conn.php';
+/** @var $pdo \PDO */
+
 $id = $_GET['id'];
+
+$statment = $pdo->prepare('select * from post WHERE cat_id LIKE :id');
+$statment->bindValue(':id', $id);
+$statment->execute();
+$post = $statment->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
 <?php include_once '../../views/partials/header.php' ?>
 <div class="container-2">
-<!--    <div class="wrap">
+    <div class="wrap">
         <div class="container-2">
             <div class="container-1" style="justify-content: flex-end">
                 <div class="container-2-box jc-end">
@@ -17,9 +25,20 @@ $id = $_GET['id'];
                     </select>
                 </div>
             </div>
+            <?php  foreach ($post as $p) : ?>
             <div class="list-post" id="list-post">
+                <div class="art-container margin-b-3">
+                    <div class="art-container-box-l" style="background-image: url('../img/whatisblog.png')"></div>
+                    <div class="art-container-box-r">
+                        <p class="color-gray font-1 margin-t-1">Datum: <?php echo $p['post_date']?></p>
+                        <h3 class="heading-3 color-org margin-t-1"><?php echo $p['title']?></h3>
+                        <p class="color-gray heading-1 margin-t-2"><?php echo $p['content']?></p>
+                        <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php?id=<?php echo$p['id']?>" class="procitaj">Procitaj vise...</a></p>
+                    </div>
+                </div>
 
             </div>
+            <?php endforeach; ?>
 
         </div>
     </div>
@@ -31,8 +50,7 @@ $id = $_GET['id'];
             </svg>
         </div>
 
-    </div>-->
-    <h2 class="heading-3"> <?php echo $id?></h2>
+    </div>
 </div>
 
 
