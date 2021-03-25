@@ -9,10 +9,10 @@
         <div class="container-2">
             <div class="container-1" style="justify-content: flex-end">
                 <div class="container-2-box jc-end">
-                    <select name="" id="" class="sort-blog">
-                        <option value="">Sortiraj po:</option>
-                        <option value="">Najnoviji</option>
-                        <option value="">Prvi ikad</option>
+                    <select name="" id="select-sort" class="sort-blog">
+                        <option value="desc" id="all">Sortiraj po:</option>
+                        <option value="desc" id="latest">Najnoviji</option>
+                        <option value="asc" id="first">Prvi ikad</option>
                     </select>
                 </div>
             </div>
