@@ -19,6 +19,8 @@
     </div>
     <div class="blog-corner-r">
     </div>
+    <label for="meter">Long:</label>
+    <meter value=".8" id="meter" style="width: 100%"> 100%</meter>
 
 
 </div>

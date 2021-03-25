@@ -1,9 +1,30 @@
 <?php
 
+require_once '../db_conn.php';
+/** @var $pdo \PDO */
+
+$id= '';
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+
+$statment = $pdo->prepare('select * from post WHERE id LIKE :id');
+$statment->bindValue(':id', $id);
+$statment->execute();
+$post = $statment->fetch(PDO::FETCH_ASSOC);
+
+$catId = $post['cat_id'];
+
+$statment = $pdo->prepare('select * from category WHERE id LIKE :id');
+$statment->bindValue(':id', $catId);
+$statment->execute();
+$cat = $statment->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
 <?php include_once '../../views/partials/header.php' ?>
+
 
 <div class="container-2">
     <div class="wrap">
@@ -12,31 +33,13 @@
         </div>
         <div class="container-2">
             <div class="container-1">
-                <h1 class="heading-5 color-org">Blog prvi</h1>
+                <h1 class="heading-5 color-org"><?php echo $post['title']?></h1>
             </div>
             <div class="content-blog-page">
-                <p class="font-1 color-gray margin-t-1">Datum: 23.12.2020</p>
-                <p class="heading-1 color-gray margin-t-1">Kategorija: <strong class="color-org">nauka, tehnologija,
-                        programiranje</strong></p>
+                <p class="font-1 color-gray margin-t-1">Datum: <?php echo $post['post_date']?></p>
+                <p class="heading-1 color-gray margin-t-1">Kategorija: <strong class="color-org"><?php echo $cat['cat']?></strong></p>
                 <p class="heading-1 color-gray margin-t-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                    consectetur
-                    tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                    ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                    eget
-                    risus nec, dapibus efficitur odio.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                    consectetur
-                    tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                    ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                    eget
-                    risus nec, dapibus efficitur odio.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                    consectetur
-                    tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                    ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                    eget
-                    risus nec, dapibus efficitur odio.
+                    <?php echo $post['content']?>
                 </p>
             </div>
 
@@ -74,6 +77,7 @@
             </div>
         </div>
     </div>
+
 
 </div>
 

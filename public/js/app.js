@@ -36,7 +36,7 @@ function loadPosts() {
                     <p class="color-gray font-1 margin-t-1">Datum: ${post[i].post_date}</p>
                     <h3 class="heading-3 color-org margin-t-1">${post[i].title}</h3>
                     <p class="color-gray heading-1 margin-t-2">${post[i].content}</p>
-                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php" class="procitaj">Procitaj vise...</a></p>
+                    <p class="color-gray heading-1 margin-t-2"><a href="blog_page.php?id=${post[i].id}" class="procitaj">Procitaj vise...</a></p>
                 </div>
             </div>`;
             }
