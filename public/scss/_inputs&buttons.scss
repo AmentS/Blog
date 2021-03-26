@@ -1,4 +1,4 @@
-.sort-blog{
+.sort-blog {
   border: 1px solid rgba(91, 91, 91, 0.2);
   width: 15rem;
   height: 4rem;
@@ -8,7 +8,7 @@
   outline: none;
 }
 
-.textarea-comment{
+.textarea-comment {
   border: 1px solid rgba(91, 91, 91, 0.2);
   width: 100%;
   height: 15rem;
@@ -19,7 +19,7 @@
   resize: none;
 }
 
-.comment-post-btn{
+.comment-post-btn {
   width: 15rem;
   height: 5rem;
   outline: none;
@@ -29,13 +29,14 @@
   color: rgba(91, 91, 91);
   font-size: 1.7rem;
   transition: .3s ease-in-out;
-  &:hover{
+
+  &:hover {
     color: #ffa117;
     border: 1px solid #ffa117;
   }
 }
 
-.input-text{
+.input-text {
   display: block;
   width: 35rem;
   height: 5rem;
@@ -43,11 +44,13 @@
   color: black;
   outline: none;
   border: 1px solid rgba(91, 91, 91, 0.2);
-  &:focus{
+
+  &:focus {
     border: 1px solid #ffa117;
   }
 }
-.textarea-contact{
+
+.textarea-contact {
   border: 1px solid rgba(91, 91, 91, 0.2);
   width: 35rem;
   height: 15rem;
@@ -56,12 +59,13 @@
   font-size: 1.7rem;
   color: black;
   resize: none;
-  &:focus{
+
+  &:focus {
     border: 1px solid #ffa117;
   }
 }
 
-.select-reasons-contact{
+.select-reasons-contact {
   display: block;
   width: 35rem;
   height: 5rem;
@@ -71,7 +75,7 @@
   border: 1px solid rgba(91, 91, 91, 0.2);
 }
 
-.blog-title-input{
+.blog-title-input {
   display: block;
   width: 100%;
   height: 5rem;
@@ -80,12 +84,13 @@
   outline: none;
   font-size: 3rem;
   border: 1px solid rgba(91, 91, 91, 0.2);
-  &:focus{
+
+  &:focus {
     border: 1px solid #ffa117;
   }
 }
 
-.blog-category-select{
+.blog-category-select {
   display: block;
   width: 35rem;
   height: 5rem;
@@ -97,7 +102,7 @@
   cursor: pointer;
 }
 
-.textarea-blog-text{
+.textarea-blog-text {
   border: 1px solid rgba(91, 91, 91, 0.2);
   width: 100%;
   height: 25rem;
@@ -106,12 +111,13 @@
   font-size: 1.7rem;
   color: black;
   resize: none;
-  &:focus{
+
+  &:focus {
     border: 1px solid #ffa117;
   }
 }
 
-.post-blog-btn{
+.post-blog-btn {
   margin-top: 1.5rem;
   width: 15rem;
   height: 5rem;
@@ -122,7 +128,31 @@
   color: rgba(91, 91, 91);
   font-size: 1.7rem;
   transition: .3s ease-in-out;
-  &:hover{
+
+  &:hover {
+    color: #ffa117;
+    border: 1px solid #ffa117;
+  }
+}
+
+.img-input {
+  display: none;
+  float: right;
+}
+
+.upload-img-label{
+  float: right;
+  width: 13rem;
+  height: 3rem;
+  border: 1px solid rgba(91, 91, 91, 0.2);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  transition: .3s ease-in-out;
+  &:hover {
     color: #ffa117;
     border: 1px solid #ffa117;
   }
