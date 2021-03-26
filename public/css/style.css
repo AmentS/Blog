@@ -1079,6 +1079,7 @@ html h3 {
   color: #5b5b5b;
   font-size: 1.7rem;
   transition: 0.3s ease-in-out;
+  display: block;
 }
 .post-blog-btn:hover {
   color: #ffa117;
