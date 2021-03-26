@@ -3,7 +3,6 @@
 require_once '../db_conn.php';
 /** @var $pdo \PDO */
 
-$id= '';
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
 }
@@ -20,6 +19,11 @@ $statment = $pdo->prepare('select * from category WHERE id LIKE :id');
 $statment->bindValue(':id', $catId);
 $statment->execute();
 $cat = $statment->fetch(PDO::FETCH_ASSOC);
+
+
+
+
+
 
 ?>
 
@@ -49,37 +53,38 @@ $cat = $statment->fetch(PDO::FETCH_ASSOC);
             <p class="heading-1 color-gray">Comments:</p>
         </div>
 
-        <div class="container-2">
-            <div class="coomment-read margin-t-3">
-                <p class="font-2 f-w-b color-gray">John Doe:</p>
-                <p class="heading-1 color-gray f-w-l margin-t-1">risus nec, dapibus efficitur odio.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                    consectetur
-                    tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                    ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                    eget
-                    risus nec, dapibus efficitur odio.</p>
-            </div>
-            <div class="coomment-read margin-t-3">
-                <p class="font-2 f-w-b color-gray">John Doe:</p>
-                <p class="heading-1 color-gray f-w-l margin-t-1">risus nec, dapibus efficitur odio.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia justo nisi, vel
-                    consectetur
-                    tortor sodales at. In nec feugiat diam, eu dictum risus. Vivamus ut venenatis neque, at congue
-                    ligula. Fusce porta ex erat, nec blandit sem sollicitudin vel. Praesent diam diam, tincidunt
-                    eget
-                    risus nec, dapibus efficitur odio.</p>
-            </div>
+        <div class="container-2" id="comments">
 
-            <div class="coomment-write margin-t-5">
-                <textarea class="textarea-comment" placeholder="Enter your comment here..."></textarea>
-                <button class="float-right margin-t-1 comment-post-btn">Submit</button>
-            </div>
-        </div>
     </div>
-
+        <p id="test" hidden><?php echo $id ?></p>
 
 </div>
 
 
+
 <?php include '../../views/partials/footer.php' ?>
+
+<script>
+    document.addEventListener('DOMContentLoaded', loadComments());
+
+    function loadComments() {
+        var test = document.getElementById('test').innerText;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../extract_comments.php?id='+test);
+        xhr.onload = function () {
+            if (this.status === 200) {
+                var post = JSON.parse(this.responseText);
+                var output = '';
+                for (var i in post) {
+                    output += `   <div class="coomment-read margin-t-3">
+                <p class="font-2 f-w-b color-gray">${post[i].username}:</p>
+                <p class="heading-1 color-gray f-w-l margin-t-1">${post[i].comm}</p>
+            </div>`;
+                }
+                document.getElementById('comments').innerHTML = output;
+            }
+        }
+        xhr.send();
+    }
+
+</script>
