@@ -50,7 +50,7 @@ $cat = $statment->fetch(PDO::FETCH_ASSOC);
             <p class="heading-1 color-gray">Comments:</p>
         </div>
 
-        <div class="container-2 border-r" id="comments">
+        <div class="container-2" id="comments">
 
         </div>
         <div class="comment-write margin-t-5">
