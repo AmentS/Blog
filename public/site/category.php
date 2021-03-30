@@ -5,7 +5,7 @@ require_once '../db_conn.php';
 
 $id = $_GET['id'];
 
-$statment = $pdo->prepare('select * from post WHERE cat_id LIKE :id');
+$statment = $pdo->prepare('select * from post WHERE cat_id LIKE :id ORDER BY post_date desc');
 $statment->bindValue(':id', $id);
 $statment->execute();
 $post = $statment->fetchAll(PDO::FETCH_ASSOC);
@@ -16,15 +16,7 @@ $post = $statment->fetchAll(PDO::FETCH_ASSOC);
 <div class="container-2">
     <div class="wrap">
         <div class="container-2">
-            <div class="container-1" style="justify-content: flex-end">
-                <div class="container-2-box jc-end">
-                    <select name="" id="select-sort" class="sort-blog">
-                        <option value="desc" id="all">Sortiraj po:</option>
-                        <option value="desc" id="latest">Najnoviji</option>
-                        <option value="asc" id="first">Prvi ikad</option>
-                    </select>
-                </div>
-            </div>
+            
             <?php  foreach ($post as $p) : ?>
             <div class="list-post" id="list-post">
                 <div class="art-container margin-b-3">
