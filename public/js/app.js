@@ -1,26 +1,25 @@
 document.addEventListener('DOMContentLoaded', loadCategorys(), loadReasons(), loadCategoryBlogCorner());
 
 //categories show index
-    function loadCategorys() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '../category_extract.php', true);
-        xhr.onload = function () {
-            if (this.status === 200) {
-                var cat = JSON.parse(this.responseText);
+function loadCategorys() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../category_extract.php', true);
+    xhr.onload = function () {
+        if (this.status === 200) {
+            var cat = JSON.parse(this.responseText);
 
-                var output = '';
-                for (var i in cat) {
-                    output += `<li><a href="../site/category.php?id=${cat[i].id}">${cat[i].cat}</a></li>`;
-                }
-
-                document.getElementById('show_cat').innerHTML = output;
+            var output = '';
+            for (var i in cat) {
+                output += `<li><a href="../site/category.php?id=${cat[i].id}">${cat[i].cat}</a></li>`;
             }
+
+            document.getElementById('show_cat').innerHTML = output;
         }
-
-        xhr.send();
-
     }
 
+    xhr.send();
+
+}
 
 
 //reasons show CONTACT
